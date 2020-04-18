@@ -21,9 +21,8 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Satzung/HSGE-Satzung.pdf
-          tag: ${{ github.ref }}
+          tag: Legal Documents - master
           overwrite: true
-          file_glob: true
 
   build_bylaws:
     runs-on: ubuntu-latest
@@ -43,7 +42,6 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: GschO/HSGE-GschO.pdf
-          tag: ${{ github.ref }}
+          tag: Legal Documents - master
           overwrite: true
-          file_glob: true
 
