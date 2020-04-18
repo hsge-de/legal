@@ -6,6 +6,9 @@ jobs:
   build_statute:
     runs-on: ubuntu-latest
     steps:
+      - uses: hecrj/setup-rust-action@v1
+        with:
+          rust-version: stable
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Compile Statute
@@ -13,15 +16,21 @@ jobs:
         with:
           args: -lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
           root_file: Satzung/HSGE-Satzung.tex
-      - name: Upload statute
-        uses: actions/upload-artifact@v1
-        with:
-          name: statute
-          path: Satzung/HSGE-Satzung.pdf
+      - name: Upload statute to release
+        uses: svenstaro/upload-release-action@v1-release
+          with:
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+            file: Satzung/HSGE-Satzung.pdf
+            tag: ${{ github.ref }}
+            overwrite: true
+            file_glob: true
 
   build_bylaws:
     runs-on: ubuntu-latest
     steps:
+      - uses: hecrj/setup-rust-action@v1
+        with:
+          rust-version: stable
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Compile Statute
@@ -29,9 +38,12 @@ jobs:
         with:
           args: -lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
           root_file: GschO/HSGE-GschO.tex
-      - name: Upload bylaws
-        uses: actions/upload-artifact@v1
-        with:
-          name: bylaws
-          path: GschO/HSGE-GschO.pdf
+      - name: Upload bylaws to release
+        uses: svenstaro/upload-release-action@v1-release
+          with:
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+            file: GschO/HSGE-GschO.pdf
+            tag: ${{ github.ref }}
+            overwrite: true
+            file_glob: true
 
