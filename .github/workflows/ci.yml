@@ -12,7 +12,7 @@ jobs:
         uses: dante-ev/latex-action@master
         with:
           args: -lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-          root_file: Satzung/HSGE-Saitzung.tex
+          root_file: Satzung/HSGE-Satzung.tex
       - name: Upload statute
         uses: actions/upload-artifact@v1
         with:
