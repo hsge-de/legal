@@ -1,0 +1,37 @@
+name: Build Legal Documents
+
+on: [push]
+
+jobs:
+  build_statute:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Compile Statute
+        uses: dante-ev/latex-action@master
+        with:
+          args: -lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+          root_file: Satzung/HSGE-Saitzung.tex
+      - name: Upload statute
+        uses: actions/upload-artifact@v1
+        with:
+          name: statute
+          path: Satzung/HSGE-Satzung.pdf
+
+  build_bylaws:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Compile Statute
+        uses: dante-ev/latex-action@master
+        with:
+          args: -lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+          root_file: GscO/HSGE-GschO.tex
+      - name: Upload bylaws
+        uses: actions/upload-artifact@v1
+        with:
+          name: bylaws
+          path: GschO/HSGE-GschO.pdf
+
