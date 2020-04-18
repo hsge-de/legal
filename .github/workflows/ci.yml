@@ -28,7 +28,7 @@ jobs:
         uses: dante-ev/latex-action@master
         with:
           args: -lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-          root_file: GscO/HSGE-GschO.tex
+          root_file: GschO/HSGE-GschO.tex
       - name: Upload bylaws
         uses: actions/upload-artifact@v1
         with:
