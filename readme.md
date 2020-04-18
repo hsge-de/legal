@@ -2,10 +2,12 @@
 
 # HSGE e. V. Legal Documents
 
+The statute and by-laws are written in LaTeX and for better readability are compiled with LuaLaTex.
+
 ## Statute / Satzung
 
-[HSGE Satzung](Satzung/HSGE-Satzung.pdf)
+The latest generated version of the statute: [HSGE Satzung](https://github.com/hsge-de/legal/releases/download/latest/HSGE-Satzung.pdf)
 
 ## By-Laws / Geschäftsordnung
 
-[GschO](GschO/HSGE-GschO.pdf)
+The latest generated version of the by-laws: [GschO](https://github.com/hsge-de/legal/releases/download/latest/HSGE-GschO.pdf)
