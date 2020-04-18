@@ -21,6 +21,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Satzung/HSGE-Satzung.pdf
+          asset_name: HSGE-Satzung.pdf
           tag: latest
           overwrite: true
 
@@ -42,6 +43,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: GschO/HSGE-GschO.pdf
+          asset_name: HSGE-GschO.pdf
           tag: latest
           overwrite: true
 
