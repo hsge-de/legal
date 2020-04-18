@@ -1,3 +1,5 @@
+![Build Legal Documents](https://github.com/hsge-de/legal/workflows/Build%20Legal%20Documents/badge.svg)
+
 # HSGE e. V. Legal Documents
 
 ## Statute / Satzung
