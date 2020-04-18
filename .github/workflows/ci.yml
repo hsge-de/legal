@@ -18,12 +18,12 @@ jobs:
           root_file: Satzung/HSGE-Satzung.tex
       - name: Upload statute to release
         uses: svenstaro/upload-release-action@v1-release
-          with:
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-            file: Satzung/HSGE-Satzung.pdf
-            tag: ${{ github.ref }}
-            overwrite: true
-            file_glob: true
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: Satzung/HSGE-Satzung.pdf
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
 
   build_bylaws:
     runs-on: ubuntu-latest
@@ -40,10 +40,10 @@ jobs:
           root_file: GschO/HSGE-GschO.tex
       - name: Upload bylaws to release
         uses: svenstaro/upload-release-action@v1-release
-          with:
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-            file: GschO/HSGE-GschO.pdf
-            tag: ${{ github.ref }}
-            overwrite: true
-            file_glob: true
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: GschO/HSGE-GschO.pdf
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
 
