@@ -10,4 +10,4 @@ The latest generated version of the statute: [HSGE Satzung](https://github.com/h
 
 ## By-Laws / Geschäftsordnung
 
-The latest generated version of the by-laws: [GschO](https://github.com/hsge-de/legal/releases/download/latest/HSGE-GschO.pdf)
+The latest generated version of the by-laws: [HSGE Geschäftsordnung](https://github.com/hsge-de/legal/releases/download/latest/HSGE-GschO.pdf)
